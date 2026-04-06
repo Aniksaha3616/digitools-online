@@ -2,7 +2,10 @@ import { useState } from "react";
 import { products } from "./data/products";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
+
 import ProductCard from "./components/ProductCard";
+import Steps from "./components/Steps";
+
 import Cart from "./components/Cart";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -31,6 +34,7 @@ function App() {
       <Navbar cartCount={cart.length} setView={setView} />
 
       <Banner />
+      
 
       {/* Toggle Buttons */}
       <div className="flex justify-center gap-4 my-6">
@@ -54,6 +58,7 @@ function App() {
           <Cart cart={cart} removeFromCart={removeFromCart} clearCart={clearCart} />
         )}
       </div>
+      <Steps />
 
       <ToastContainer />
     </>

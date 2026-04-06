@@ -1,35 +1,94 @@
-export default function Cart({ cart, removeFromCart, clearCart }) {
+export default function Cart({ cart, removeFromCart, clearCart, setView }) {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
-  if (cart.length === 0) {
-    return <p className="text-center">Cart is empty</p>;
-  }
-
   return (
-    <div>
-      {cart.map(item => (
-        <div key={item.id} className="flex justify-between p-4 bg-base-200 mb-2">
-          <div>
-            <span className="text-2xl">{item.icon}</span>
-            <p>{item.name}</p>
-          </div>
-          <div>
-            <p>${item.price}</p>
+    <section className="bg-gray-50 py-12 min-h-screen">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        {/* 🔹 Top Section */}
+        <div className="text-center mb-8">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
+            Your Shopping Cart
+          </h1>
+
+          <p className="text-gray-500 mt-2">
+            Manage your selected digital tools
+          </p>
+
+          {/* Toggle Buttons */}
+          <div className="flex justify-center gap-3 mt-5">
             <button
-              onClick={() => removeFromCart(item.id)}
-              className="btn btn-sm btn-error"
+              onClick={() => setView("products")}
+              className="px-5 py-2 rounded-full border text-gray-600 hover:border-purple-600 hover:text-purple-600 transition"
             >
-              Remove
+              Products
+            </button>
+
+            <button className="px-5 py-2 rounded-full bg-purple-600 text-white shadow">
+              Cart ({cart.length})
             </button>
           </div>
         </div>
-      ))}
 
-      <h2 className="text-xl font-bold">Total: ${total}</h2>
+        {/* 🔹 Cart Card */}
+        <div className="bg-white rounded-xl shadow-sm p-6">
+          <h2 className="text-lg font-semibold mb-6">Your Cart</h2>
 
-      <button onClick={clearCart} className="btn btn-success mt-4">
-        Proceed to Checkout
-      </button>
-    </div>
+          {cart.length === 0 ? (
+            <p className="text-center text-gray-500">Cart is empty</p>
+          ) : (
+            <>
+              {/* Items */}
+              <div className="space-y-4">
+                {cart.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex justify-between items-center p-4 rounded-lg border hover:shadow-sm transition"
+                  >
+                    {/* Left */}
+                    <div className="flex items-center gap-4">
+                      <span className="text-2xl">{item.icon}</span>
+                      <p className="font-medium text-gray-700">
+                        {item.name}
+                      </p>
+                    </div>
+
+                    {/* Right */}
+                    <div className="flex items-center gap-6">
+                      <p className="font-semibold text-gray-800">
+                        ${item.price}
+                      </p>
+
+                      <button
+                        onClick={() => removeFromCart(item.id)}
+                        className="text-red-500 hover:text-red-700 text-sm"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Total */}
+              <div className="flex justify-between items-center mt-8 border-t pt-4">
+                <h3 className="text-lg font-semibold">Total</h3>
+                <p className="text-xl font-bold text-purple-600">
+                  ${total}
+                </p>
+              </div>
+
+              {/* Checkout */}
+              <button
+                onClick={clearCart}
+                className="w-full mt-6 bg-purple-600 text-white py-3 rounded-full hover:bg-purple-700 transition"
+              >
+                Proceed to Checkout
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }
