@@ -5,7 +5,7 @@ import Banner from "./components/Banner";
 
 import ProductCard from "./components/ProductCard";
 import Steps from "./components/Steps";
-
+import Pricing from "./components/Pricing";
 import Cart from "./components/Cart";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -59,6 +59,7 @@ function App() {
         )}
       </div>
       <Steps />
+      <Pricing />
 
       <ToastContainer />
     </>

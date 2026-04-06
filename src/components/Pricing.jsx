@@ -35,7 +35,7 @@ export default function Pricing() {
           </div>
 
           {/* Pro (Highlighted) */}
-          <div className="bg-gradient-to-o from-purple-600 to-purple-700 text-white p-6 rounded-xl shadow-lg relative">
+          <div className="bg-linear-to-b from-purple-600 to-purple-700 text-white p-6 rounded-xl shadow-lg relative">
             
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-xs px-3 py-1 rounded-full text-black">
               Most Popular
