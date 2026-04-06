@@ -5,10 +5,10 @@ export default function Cart({ cart, removeFromCart, clearCart,  }) {
     <section className="bg-gray-50 py-12 min-h-screen">
       <div className="max-w-4xl mx-auto px-6">
         
-        {/* 🔹 Top Section */}
+        
 
 
-        {/* 🔹 Cart Card */}
+        
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h2 className="text-lg font-semibold mb-6">Your Cart</h2>
 
@@ -16,16 +16,23 @@ export default function Cart({ cart, removeFromCart, clearCart,  }) {
             <p className="text-center text-gray-500">Cart is empty</p>
           ) : (
             <>
-              {/* Items */}
+              
               <div className="space-y-4">
                 {cart.map((item) => (
                   <div
                     key={item.id}
                     className="flex justify-between items-center p-4 rounded-lg border hover:shadow-sm transition"
                   >
-                    {/* Left */}
+                    
                     <div className="flex items-center gap-4">
-                      <span className="text-2xl">{item.icon}</span>
+                      <div className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full overflow-hidden">
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          className="w-6 h-6 object-contain"
+                        />
+                      </div>
+
                       <p className="font-medium text-gray-700">
                         {item.name}
                       </p>

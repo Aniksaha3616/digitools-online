@@ -8,7 +8,7 @@ export const products = [
     tag: "popular",
     tagType: "badge-primary",
     features: ["100+ templates", "SEO optimization", "Export to PDF"],
-    icon: "📝"
+    icon: "/src/assets/products/writing_2327400 1.png"
   },
   {
     id: 2,
@@ -19,50 +19,50 @@ export const products = [
     tag: "best",
     tagType: "badge-secondary",
     features: ["Figma files", "Responsive UI", "Modern design"],
-    icon: "🎨"
+    icon: "/src/assets/products/design-tool.png"
   },
   {
     id: 3,
-    name: "SEO Toolkit",
+    name: "Premium Stock Assets",
     description: "Boost search rankings",
     price: 19,
     period: "monthly",
     tag: "new",
     tagType: "badge-accent",
     features: ["Keyword tools", "Analytics", "Reports"],
-    icon: "📊"
+    icon: "/src/assets/products/camera_8775444 1.png"
   },
   {
     id: 4,
-    name: "Resume Builder",
+    name: "Automation Toolkit",
     description: "Create ATS friendly CV",
     price: 15,
     period: "one-time",
     tag: "popular",
     tagType: "badge-primary",
     features: ["ATS optimization", "Templates", "PDF export"],
-    icon: "📄"
+    icon: "/src/assets/products/operation.png"
   },
   {
     id: 5,
-    name: "Dev Toolkit",
+    name: "Resume Builder Pro",
     description: "Tools for developers",
     price: 39,
     period: "yearly",
     tag: "best",
     tagType: "badge-secondary",
     features: ["API tools", "Debugger", "Extensions"],
-    icon: "💻"
+    icon: "/src/assets/products/portfolio.png"
   },
   {
     id: 6,
-    name: "Marketing Kit",
+    name: "Social Media Content Kit",
     description: "Grow your business",
     price: 25,
     period: "monthly",
     tag: "new",
     tagType: "badge-accent",
     features: ["Email tools", "Automation", "CRM"],
-    icon: "📢"
+    icon: "/src/assets/products/social-media.png"
   }
 ];

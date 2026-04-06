@@ -2,19 +2,19 @@ export default function Steps() {
   const steps = [
     {
       id: "01",
-      icon: "👤",
+      icon: "/src/assets/user.png", // replace with your image path
       title: "Create Account",
       desc: "Sign up for free in seconds. No credit card required to get started.",
     },
     {
       id: "02",
-      icon: "📦",
+      icon: "/src/assets/package.png", // replace with your image path
       title: "Choose Products",
       desc: "Browse our catalog and select the tools that fit your needs.",
     },
     {
       id: "03",
-      icon: "🚀",
+      icon: "/src/assets/rocket.png", // replace with your image path
       title: "Start Creating",
       desc: "Download and start using your premium tools immediately.",
     },
@@ -44,9 +44,13 @@ export default function Steps() {
                 {step.id}
               </span>
 
-              {/* Icon */}
-              <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-purple-100 text-2xl">
-                {step.icon}
+              {/* Icon Image */}
+              <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-purple-100">
+                <img
+                  src={step.icon}
+                  alt={step.title}
+                  className="w-8 h-8 object-contain"
+                />
               </div>
 
               {/* Content */}

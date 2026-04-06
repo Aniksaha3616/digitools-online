@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <h3 className="text-xl font-semibold text-white mb-3">DigiTools</h3>
           <p className="text-sm text-gray-400">
-            Premium digital tools for creators, professionals, and businesses. Work smarter
+            Premium digital tools for creators. <br /> professionals, and businesses. Work smarter <br />
             with our suite of powerful tools.
           </p>
         </div>
