@@ -1,3 +1,9 @@
+import writing from "../assets/products/writing_2327400 1.png"
+import designtool from "../assets/products/writing_2327400 1.png"
+import camera from "../assets/products/camera_8775444 1.png"
+import operation from"../assets/products/operation.png"
+import portfolio from "../assets/products/portfolio.png"
+import open from "../assets/products/social-media.png"
 export const products = [
   {
     id: 1,
@@ -8,7 +14,7 @@ export const products = [
     tag: "popular",
     tagType: "badge-primary",
     features: ["100+ templates", "SEO optimization", "Export to PDF"],
-    icon: "/src/assets/products/writing_2327400 1.png"
+    img: writing
   },
   {
     id: 2,
@@ -19,7 +25,7 @@ export const products = [
     tag: "best",
     tagType: "badge-secondary",
     features: ["Figma files", "Responsive UI", "Modern design"],
-    icon: "/src/assets/products/design-tool.png"
+    img: designtool
   },
   {
     id: 3,
@@ -30,7 +36,7 @@ export const products = [
     tag: "new",
     tagType: "badge-accent",
     features: ["Keyword tools", "Analytics", "Reports"],
-    icon: "/src/assets/products/camera_8775444 1.png"
+    img: camera
   },
   {
     id: 4,
@@ -41,7 +47,7 @@ export const products = [
     tag: "popular",
     tagType: "badge-primary",
     features: ["ATS optimization", "Templates", "PDF export"],
-    icon: "/src/assets/products/operation.png"
+    img: operation
   },
   {
     id: 5,
@@ -52,7 +58,7 @@ export const products = [
     tag: "best",
     tagType: "badge-secondary",
     features: ["API tools", "Debugger", "Extensions"],
-    icon: "/src/assets/products/portfolio.png"
+    img: portfolio
   },
   {
     id: 6,
@@ -63,6 +69,6 @@ export const products = [
     tag: "new",
     tagType: "badge-accent",
     features: ["Email tools", "Automation", "CRM"],
-    icon: "/src/assets/products/social-media.png"
+    img: open
   }
 ];

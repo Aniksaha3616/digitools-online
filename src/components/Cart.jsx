@@ -27,7 +27,7 @@ export default function Cart({ cart, removeFromCart, clearCart,  }) {
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full overflow-hidden">
                         <img
-                          src={item.icon}
+                          src={item.img}
                           alt={item.name}
                           className="w-6 h-6 object-contain"
                         />

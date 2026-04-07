@@ -1,20 +1,24 @@
+import user from "../assets/products/user.png";
+import pkg from "../assets/products/package.png";
+import rkt from "../assets/products/rocket.png";
+
 export default function Steps() {
   const steps = [
     {
       id: "01",
-      icon: "/src/assets/user.png", // replace with your image path
+      img: user,
       title: "Create Account",
       desc: "Sign up for free in seconds. No credit card required to get started.",
     },
     {
       id: "02",
-      icon: "/src/assets/package.png", // replace with your image path
+      img: pkg,
       title: "Choose Products",
       desc: "Browse our catalog and select the tools that fit your needs.",
     },
     {
       id: "03",
-      icon: "/src/assets/rocket.png", // replace with your image path
+      img: rkt,
       title: "Start Creating",
       desc: "Download and start using your premium tools immediately.",
     },
@@ -47,7 +51,7 @@ export default function Steps() {
               {/* Icon Image */}
               <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-purple-100">
                 <img
-                  src={step.icon}
+                  src={step.img}
                   alt={step.title}
                   className="w-8 h-8 object-contain"
                 />

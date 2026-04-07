@@ -1,3 +1,5 @@
+import bannerimg from "../assets/products/banner.png"
+import playbtn from "../assets/products/Play.png"
 export default function Banner() {
   return (
     <div className="px-20  bg-gray-50">
@@ -26,7 +28,7 @@ export default function Banner() {
           </button>
 
           <button className="border border-purple-600 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-50 transition flex items-center gap-2">
-            <span><img src="/src/assets/Play.png" alt="" /></span> Watch Demo
+            <span><img src={playbtn} alt="" /></span> Watch Demo
           </button>
         </div>
       </div>
@@ -34,7 +36,7 @@ export default function Banner() {
       
       <div className="mt-10 md:mt-0">
         <img
-          src="/src/assets/banner.png"
+          src={bannerimg}
           alt="Digital Tools"
           className="w-100 md:w-112.5 rounded-lg shadow"
         />

@@ -23,7 +23,7 @@ export default function ProductCard({ product, addToCart }) {
       {/* Icon Image */}
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 mb-4 overflow-hidden">
         <img
-          src={product.icon}
+          src={product.img}
           alt={product.name}
           className="w-6 h-6 object-contain"
         />
